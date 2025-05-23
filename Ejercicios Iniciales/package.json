@@ -1,0 +1,21 @@
+{
+  "name": "bootcamp",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "hello_world.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "prompt": "^1.3.0",
+    "prompt-sync": "^4.2.0",
+    "save": "^2.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/prompt-sync": "^4.2.3"
+  }
+}
