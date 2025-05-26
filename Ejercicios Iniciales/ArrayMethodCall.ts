@@ -15,4 +15,4 @@ function valueFiltering (numbers: number[], min: number, max: number){ // se pod
     return numbers.filter(number => number >= min  && number <= max);
 }
 
-console.log(valueFiltering([0, 1,30,50,64,75,76, 100], 60, 75));
+console.log(valueFiltering([0, 1,30,50,64,75,76, 100], 60, 75)); // siempre va un espacio despues de las comas
