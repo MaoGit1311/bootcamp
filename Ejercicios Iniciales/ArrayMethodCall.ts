@@ -1,5 +1,5 @@
 function capitalizeArray (list: string[]): string[] {
-    return list.map(item => item.charAt(0).toUpperCase() + item.slice(1));
+    return list.map(item => item.charAt(0).toUpperCase() + item.slice(1)); // aca se puede usar una funcion flecha (delta sin brackets), se deberia usar la concatenacion con `
 }
 
 console.log(capitalizeArray (["mauricio", "ulises", "pancho", "pepe",""]));
@@ -11,8 +11,8 @@ Hint 2:You can use a condition similar to the ones we learned in the if-else if-
 
 */
 
-function valueFiltering (numbers: number[]){
-    return numbers.filter(number => number >= 50 && number <= 75);
+function valueFiltering (numbers: number[], min: number, max: number){ // se podrian establecer los limites
+    return numbers.filter(number => number >= min  && number <= max);
 }
 
-console.log(valueFiltering ([0, 1,30,50,64,75,76, 100]));
+console.log(valueFiltering([0, 1,30,50,64,75,76, 100], 60, 75));
