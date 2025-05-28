@@ -1,5 +1,5 @@
 function capitalizeArray (list: string[]): string[] {
-    return list.map(item => item.charAt(0).toUpperCase() + item.slice(1)); // aca se puede usar una funcion flecha (delta sin brackets), se deberia usar la concatenacion con `
+    return list.map(item => `${item.charAt(0).toUpperCase()} ${item.slice(1)}`);
 }
 
 console.log(capitalizeArray (["mauricio", "ulises", "pancho", "pepe",""]));
