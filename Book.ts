@@ -1,35 +1,39 @@
-//Se crea la clase/objeto
+// Se crea la clase/objeto
 class Book {
-    //Se declaran los atributos del objeto
+
+    // Se declaran los atributos del objeto
     title: string;
     author: string;
     publishedYear: number;
 
-    //Se inicializan los atributos del objeto
-    constructor (title: string, author: string, publishedYear: number){
+    // Se inicializan los atributos del objeto
+    constructor(title: string, author: string, publishedYear: number) {
         this.title = title;
         this.author = author;
         this.publishedYear = publishedYear;
     }
 
-    //Se crea el método printBookDetails para imprimir los atributos del objeto o libro en cuestión
-    printBookDetails(){
+    // Se crea el método printBookDetails para imprimir los atributos del objeto o libro en cuestión
+    printBookDetails() {
         console.log(`${this.title} by ${this.author}, published in ${this.publishedYear}`)
     }
 
-    //Se crea el método isClassic para validar si la diferencia entre el año actual y el año de impresión es mayor a 50 para derterminar el libro como Clasic
-    isClassic(){
+    // Se crea el método isClassic para validar si la diferencia entre el año actual y el año de impresión es mayor
+    // a 50 para derterminar el libro como Classic
+    isClassic() {
         let classicBook : boolean; 
         classicBook = false;
 
-        //Se crea variable de tipo fecha
+        // Se crea variable de tipo fecha
         let date = new Date();
         let currentYear : number;
-        //Se asigna el valor del año de la fecha actual a la variable currentYear
+
+        // Se asigna el valor del año de la fecha actual a la variable currentYear
         currentYear = date.getFullYear();      
 
-        //Se valida si la diferencia entre el año actual (currentYear) y año de publicación (publishedYear) es mayor a 50 para marcarlo como cásico
-        if (currentYear - this.publishedYear > 50){
+        // Se valida si la diferencia entre el año actual (currentYear) y año de publicación (publishedYear) es mayor 
+        // a 50 para marcarlo como cásico
+        if (currentYear - this.publishedYear > 50) {
             classicBook = true;
             return classicBook;
         }  
@@ -37,14 +41,14 @@ class Book {
 
 }
 
-//Se declaran instancias del objeto o de la clase
-const book1 = new Book ("The Lord of the Rings", "John Ronald Reuel Tolkien", 1954);
-const book2 = new Book ("It", "Stephen King", 1986);
-const book3 = new Book ("The Shining", "Stephen King", 1977);
-const book4 = new Book ("Cañitas", "Carlos Trejo", 2005);
-const book5 = new Book ("De qué hablo cuando hablo de correr", "Haruki Murakami", 2013);
-const book6 = new Book ("Nacidos para correr", "Christopher McDougall", 2013);
-const book7 = new Book ("Para Leer Al Pato Donald", "A. Dorfman - A. Mattelart", 1973);
+// Se declaran instancias del objeto o de la clase
+const book1 = new Book("The Lord of the Rings", "John Ronald Reuel Tolkien", 1954); // van con comilla sencilla
+const book2 = new Book("It", "Stephen King", 1986);
+const book3 = new Book("The Shining", "Stephen King", 1977);
+const book4 = new Book("Cañitas", "Carlos Trejo", 2005);
+const book5 = new Book("De qué hablo cuando hablo de correr", "Haruki Murakami", 2013);
+const book6 = new Book("Nacidos para correr", "Christopher McDougall", 2013);
+const book7 = new Book("Para Leer Al Pato Donald", "A. Dorfman - A. Mattelart", 1973);
 
 /*
 book1.printBookDetails();
@@ -77,10 +81,10 @@ if (book7.isClassic())
     console.log(`The ${book7.title} is considered as a classic`);
 */
 
-//Se declara el arreglo de objetos libro
+// Se declara el arreglo de objetos libro
 const booksArray = [book1, book2, book3, book4, book5, book6, book7];
 
-//Se declara book como una constante de tipo booksArray, para utilizarlo dentro del for ya que no necesitamos el índica del arreglo para ninguna acción
+// Se declara book como una constante de tipo booksArray, para utilizarlo dentro del for ya que no necesitamos el índica del arreglo para ninguna acción
 for (const book of booksArray) {
     book.printBookDetails();
     if (book.isClassic()) {
