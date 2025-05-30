@@ -1,8 +1,8 @@
 function capitalizeArray (list: string[]): string[] {
-    return list.map(item => `${item.charAt(0).toUpperCase()} ${item.slice(1)}`);
+    return list.map(item => `${item.charAt(0).toUpperCase()}${item.slice(1)}`);
 }
 
-console.log(capitalizeArray (["mauricio", "ulises", "pancho", "pepe",""]));
+console.log(capitalizeArray(["mauricio", "ulises", "pancho", "pepe",""]));
 
 /*
 Create an array method call that takes an array of numbers and only returns the ones that are between 50 and 75.
@@ -11,7 +11,7 @@ Hint 2:You can use a condition similar to the ones we learned in the if-else if-
 
 */
 
-function valueFiltering (numbers: number[], min: number, max: number){ // se podrian establecer los limites
+function valueFiltering(numbers: number[], min: number, max: number){ // se podrian establecer los limites
     return numbers.filter(number => number >= min  && number <= max);
 }
 
