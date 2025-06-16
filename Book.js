@@ -74,4 +74,5 @@ for (var _i = 0, booksArray_1 = booksArray; _i < booksArray_1.length; _i++) {
     if (book.isClassic()) {
         console.log("The ".concat(book.title, " is considered as a classic"));
     }
+    console.log("\n");
 }
